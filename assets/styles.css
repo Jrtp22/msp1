@@ -1,0 +1,7 @@
+#screen {
+    background-image: url("./Windows_Screen.png");
+    height: 400px;
+    width: 400px;
+    background-repeat: no-repeat;
+    background-size: 400px;
+}
