@@ -4,5 +4,12 @@
     width: 400px;
     background-repeat: no-repeat;
     background-size: 400px;
+    display: flex;
+    justify-content: center;
 }
-
+#wordDisplay {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 150px;
+    width: max-content;
+}
