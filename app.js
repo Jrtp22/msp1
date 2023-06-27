@@ -6,7 +6,7 @@ letters.forEach(letter => {
     letterBtn.setAttribute("id", letter);
     letterBoard.appendChild(letterBtn);
 });
-let maxLives = 10;
+let maxLives = 10; //might make it smaller depending on how i do the picture for missile 
 let gameWords = ['malware', 'phishing', 'spam', 'spyware', 'trojan', 'abcdefg', 'password', 'passcode', 'hacking'];
 let selectedWord = gameWords[Math.floor(Math.random() * gameWords.length)];
 let hiddenWord = Array(selectedWord.length).fill('_');
