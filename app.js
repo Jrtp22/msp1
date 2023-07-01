@@ -70,6 +70,9 @@ function checkLetter(letter) {
 
 //add a win function
 function loseGame() {
+    setTimeout(()=> {
+        window.location.reload()
+        }, 1000)
     alert("you lose :( the word was " + selectedWord + "!" );
 }
 
