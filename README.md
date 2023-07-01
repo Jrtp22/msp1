@@ -10,3 +10,5 @@ https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javas
 https://dmitripavlutin.com/javascript-fill-array/#21-using-arrayfill
 
 https://herewecode.io/blog/array-to-string-without-commas-javascript/
+
+https://www.tweaking4all.com/forum/web-development/css-how-to-create-a-keyboard-button/

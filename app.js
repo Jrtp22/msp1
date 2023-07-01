@@ -7,7 +7,7 @@ letters.forEach(letter => {
     letterBoard.appendChild(letterBtn);
 });
 let maxLives = 10; //might make it smaller depending on how i do the picture for missile 
-let gameWords = ['malware', 'phishing', 'spam', 'spyware', 'trojan', 'abcdefg', 'hackword', 'passcode', 'hacking'];
+let gameWords = ['malware', 'password', 'phishing', 'spam', 'spyware', 'trojan', 'abcdefg', 'hackword', 'passcode', 'hacking', 'impossible', 'code', 'matrix'];
 //let gameWords =  ['malware']
 let selectedWord = gameWords[Math.floor(Math.random() * gameWords.length)];
 let hiddenWord = Array(selectedWord.length).fill('_');
@@ -15,12 +15,14 @@ let wordDisplay = document.getElementById('wordDisplay');
 wordDisplay.innerHTML = hiddenWord.join(" ");
 console.log(selectedWord);
 
+
+//add a win function
 function win() {
-    setTimeout(()=> {
+    setTimeout(() => {
         window.location.reload()
-        }, 5000);
-        window.alert("you win")
-;
+    }, 4000);
+    window.alert("you win")
+        ;
 }
 //add function to check when the word is complete and invoke a win function
 function checkWin() {
@@ -35,6 +37,8 @@ function checkLives() {
         loseGame();
     }
 }
+//add function to add letter to the word if correct
+//add function to minus life if wrong and end game at 0
 //add function to check if the letter is in the word
 letterBoard.addEventListener('click', (e) => {
     let letter = e.target.innerHTML;
@@ -62,19 +66,13 @@ function checkLetter(letter) {
 
     checkWin();
 }
-
-//add function to minus life if wrong and end game at 0
-//add function to add letter to the word if correct
-
-
-
-//add a win function
+//add function to reset game
 function loseGame() {
-    setTimeout(()=> {
+    setTimeout(() => {
         window.location.reload()
-        }, 1000)
-    alert("you lose :( the word was " + selectedWord + "!" );
+    }, 1000)
+    alert("you lose :( the word was " + selectedWord + "!");
 }
 
 
-//add function to reset game
+
