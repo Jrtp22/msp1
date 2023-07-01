@@ -7,8 +7,8 @@ letters.forEach(letter => {
     letterBoard.appendChild(letterBtn);
 });
 let maxLives = 10; //might make it smaller depending on how i do the picture for missile 
-//let gameWords = ['malware', 'phishing', 'spam', 'spyware', 'trojan', 'abcdefg', 'hackword', 'passcode', 'hacking'];
-let gameWords =  ['malware']
+let gameWords = ['malware', 'phishing', 'spam', 'spyware', 'trojan', 'abcdefg', 'hackword', 'passcode', 'hacking'];
+//let gameWords =  ['malware']
 let selectedWord = gameWords[Math.floor(Math.random() * gameWords.length)];
 let hiddenWord = Array(selectedWord.length).fill('_');
 let wordDisplay = document.getElementById('wordDisplay');
@@ -16,7 +16,11 @@ wordDisplay.innerHTML = hiddenWord.join(" ");
 console.log(selectedWord);
 
 function win() {
-    alert("you win");
+    setTimeout(()=> {
+        window.location.reload()
+        }, 5000);
+        window.alert("you win")
+;
 }
 //add function to check when the word is complete and invoke a win function
 function checkWin() {
@@ -39,9 +43,26 @@ letterBoard.addEventListener('click', (e) => {
 function checkLetter(letter) {
     let wordIndex = selectedWord.split('');
     let wordArray = wordIndex.map((char, index) => {
-    
-    })
+        if (char === letter) {
+            return index;
+        }
+        return -1;
+    }).filter(index => index !== -1);
+
+    if (wordArray.length > 0) {
+        wordArray.forEach(index => {
+            hiddenWord[index] = letter;
+        });
+        wordDisplay.innerHTML = hiddenWord.join(" ");
+    } else {
+        maxLives--;
+        console.log(maxLives);
+        checkLives();
+    }
+
+    checkWin();
 }
+
 //add function to minus life if wrong and end game at 0
 //add function to add letter to the word if correct
 
@@ -49,7 +70,7 @@ function checkLetter(letter) {
 
 //add a win function
 function loseGame() {
-    alert("you lose :(");
+    alert("you lose :( the word was " + selectedWord + "!" );
 }
 
 
