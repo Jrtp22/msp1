@@ -17,7 +17,7 @@ h1{
 }
 #screen {
     background-image: url("./Windows_Screen.png");
-    height: 400px;
+    height: 300px;
     width: 400px;
     background-repeat: no-repeat;
     background-size: 400px;
@@ -25,6 +25,7 @@ h1{
     justify-content: center;
     margin-right: 25%;
     margin-left: 25%;
+    margin-top: 30px;
 }
 #wordDisplay {
     text-align: center;
