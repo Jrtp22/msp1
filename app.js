@@ -1,3 +1,4 @@
+let gameBoard = document.getElementById('gameBoard');
 let letterBoard = document.getElementById('letterBoard');
 let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 letters.forEach(letter => {
@@ -6,7 +7,8 @@ letters.forEach(letter => {
     letterBtn.setAttribute("id", letter);
     letterBoard.appendChild(letterBtn);
 });
-let maxLives = 10; //might make it smaller depending on how i do the picture for missile 
+let maxLives = 9; //might make it smaller depending on how i do the picture for missile 
+let rocket = document.getElementById('rocketMan');
 let gameWords = ['malware', 'password', 'phishing', 'spam', 'spyware', 'trojan', 'abcdefg', 'hackword', 'passcode', 'hacking', 'impossible', 'code', 'matrix'];
 //let gameWords =  ['malware']
 let selectedWord = gameWords[Math.floor(Math.random() * gameWords.length)];
@@ -60,6 +62,9 @@ function checkLetter(letter) {
         wordDisplay.innerHTML = hiddenWord.join(" ");
     } else {
         maxLives--;
+        let rocketImage = document.getElementById('rocket');
+        rocketImage.setAttribute('src', `assets\\${maxLives}.jpg`);
+        rocket.appendChild(rocketImage);
         console.log(maxLives);
         checkLives();
     }
@@ -70,8 +75,12 @@ function checkLetter(letter) {
 function loseGame() {
     setTimeout(() => {
         window.location.reload()
-    }, 1000)
-    alert("you lose :( the word was " + selectedWord + "!");
+    }, 7000)
+    let boom = document.createElement('img');
+    boom.setAttribute('src', 'assets\\0.jpg');
+    boom.setAttribute('id', 'boom');
+    gameBoard.appendChild(boom);
+    alert("you lose :( the word was " + selectedWord + "! The missile launched!");
 }
 
 

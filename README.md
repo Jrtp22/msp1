@@ -12,3 +12,5 @@ https://dmitripavlutin.com/javascript-fill-array/#21-using-arrayfill
 https://herewecode.io/blog/array-to-string-without-commas-javascript/
 
 https://codepen.io/giumagnani/pen/jBNJKw
+
+pixbay.com

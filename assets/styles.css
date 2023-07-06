@@ -1,3 +1,20 @@
+main{
+    background-image: url("./background.jpg");
+}
+#gameBoard {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    color: aqua;
+    background-color: #444;
+    border-radius: 10px;
+    width: 600px;
+    margin-left: 25%;
+}
 #screen {
     background-image: url("./Windows_Screen.png");
     height: 400px;
@@ -6,6 +23,8 @@
     background-size: 400px;
     display: flex;
     justify-content: center;
+    margin-right: 25%;
+    margin-left: 25%;
 }
 #wordDisplay {
     text-align: center;
@@ -27,7 +46,7 @@
 button {
     box-sizing: border-box;
 
-    font-size: 10px;
+    font-size: 15px;
     text-align: center;
     width: 30px;
     color: #555;
@@ -66,4 +85,12 @@ button {
             -2px 2px 4px rgba(#444, 0.25), 0 0px 4px rgba(#444, 0.25);
         transform: translateY(4px);
     }
+}
+#boom {
+    position: relative;
+    z-index: 99;
+    top : -700px;
+}
+#rocket {
+    width: 200px;
 }
