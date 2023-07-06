@@ -23,7 +23,7 @@ function win() {
     setTimeout(() => {
         window.location.reload()
     }, 4000);
-    window.alert("you win")
+    window.alert("You Win! The world is saved!");
         ;
 }
 //add function to check when the word is complete and invoke a win function
