@@ -32,6 +32,12 @@ h1{
     font-size: 40px;
     margin-top: 150px;
     width: max-content;
+    z-index: 2;
+}
+#maxLives {
+    text-align: center;
+    margin-top: 240px;
+    z-index: 0;
 }
 #letterBoard {
     display: flex;

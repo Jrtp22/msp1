@@ -16,7 +16,11 @@ let hiddenWord = Array(selectedWord.length).fill('_');
 let wordDisplay = document.getElementById('wordDisplay');
 wordDisplay.innerHTML = hiddenWord.join(" ");
 console.log(selectedWord);
-
+function showLives() {
+    let displayLives = document.getElementById('maxLives');
+    displayLives.innerHTML = 'lives: ' + maxLives;
+}
+showLives();
 
 //add a win function
 function win() {
@@ -24,7 +28,7 @@ function win() {
         window.location.reload()
     }, 4000);
     window.alert("You Win! The world is saved!");
-        ;
+    ;
 }
 //add function to check when the word is complete and invoke a win function
 function checkWin() {
@@ -63,9 +67,10 @@ function checkLetter(letter) {
     } else {
         maxLives--;
         let rocketImage = document.getElementById('rocket');
-        rocketImage.setAttribute('src', `assets\\${maxLives}.jpg`);
+        rocketImage.setAttribute('src', `assets\\${maxLives}.png`);
         rocket.appendChild(rocketImage);
         console.log(maxLives);
+        showLives();
         checkLives();
     }
 
@@ -77,7 +82,7 @@ function loseGame() {
         window.location.reload()
     }, 7000)
     let boom = document.createElement('img');
-    boom.setAttribute('src', 'assets\\0.jpg');
+    boom.setAttribute('src', 'assets\\0.png');
     boom.setAttribute('id', 'boom');
     gameBoard.appendChild(boom);
     alert("you lose :( the word was " + selectedWord + "! The missile launched!");
