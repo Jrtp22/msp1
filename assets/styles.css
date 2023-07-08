@@ -106,3 +106,42 @@ button {
     width: 400px;
     text-align: center;
 }
+
+@media screen and (max-width: 525px) {
+h1{
+    width: 300px;
+    margin-bottom: 0;
+    font-size:medium;
+}
+#rockwtman{
+    width: 100px;
+
+}
+
+#rocket{
+    width: 100px;
+}
+#screen{
+    width: 200px;
+    height: 150px;
+    background-size: 200px;
+    margin-right: 25%;
+    margin-top: 5px;
+}
+#wordDisplay{
+    margin-top: 50px;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 30px;
+    width: 200px;
+}
+#letterBoard{
+    width: 470px;
+}
+button{
+    font-size: 10px;
+    width: 20px;
+    height: 25px;
+    text-align: center;
+}
+}
