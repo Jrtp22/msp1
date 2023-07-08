@@ -127,13 +127,24 @@ h1{
     background-size: 200px;
     margin-right: 25%;
     margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+#maxLives {
+    text-align: center;
+    margin-top: 0px;
+    z-index: 0;
+    font-size: small;
+
 }
 #wordDisplay{
-    margin-top: 50px;
+    margin: 0%;
+padding-top: 50px;
     font-size: 15px;
     text-align: center;
-    margin-left: 30px;
+
     width: 200px;
+    height: 50px;
 }
 #letterBoard{
     width: 400px;
